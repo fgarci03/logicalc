@@ -1,16 +1,18 @@
 #ifndef LOGICALC_H_
 #define LOGICALC_H_
 
-// todo: implement
 bool and(int numOfElements, ...);
 bool andList(bool booleanList[]);
 
-// todo: implement
 bool or(int numOfElements, ...);
 bool orList(bool booleanList[]);
 
 bool xor(int numOfElements, ...);
 bool xorList(bool booleanList[]);
+
+// todo: implement
+bool formalXor(int numOfElements, ...);
+bool formalXorList(bool booleanList[]);
 
 // todo: implement
 bool nand(int numOfElements, ...);
