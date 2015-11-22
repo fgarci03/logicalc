@@ -16,7 +16,7 @@ int main() {
 
   printf("AND:\n");
 
-  // AND example
+  // and example
   printf("and(3, false, false, false): %d\n", and(3, false, false, false));
   printf("and(3, true, false, false): %d\n", and(3, true, false, false));
   printf("and(3, true, true, false): %d\n", and(3, true, true, false));
@@ -26,7 +26,13 @@ int main() {
   printf("andList({false, false, false}): %d\n", andList(allFalse));
   printf("andList({true, false, false}): %d\n", andList(oneTrue));
   printf("andList({true, true, false}): %d\n", andList(someTrue));
-  printf("andList({true, true, true}): %d\n\n\n", andList(allTrue));
+  printf("andList({true, true, true}): %d\n\n", andList(allTrue));
+
+  // AND example
+  printf("false AND false AND false: %d\n", false AND false AND false);
+  printf("true AND false AND false: %d\n", true AND false AND false);
+  printf("true AND true AND false: %d\n", true AND true AND false);
+  printf("true AND true AND true: %d\n\n\n", true AND true AND true);
 
 
   printf("OR:\n");
@@ -39,7 +45,12 @@ int main() {
   // orList example
   printf("orList(allFalse): %d\n", orList(allFalse));
   printf("orList(oneTrue): %d\n", orList(oneTrue));
-  printf("orList(someTrue): %d\n\n\n", orList(someTrue));
+  printf("orList(someTrue): %d\n\n", orList(someTrue));
+
+  // OR example
+  printf("false OR false OR false: %d\n", false OR false OR false);
+  printf("true OR false OR false: %d\n", true OR false OR false);
+  printf("true OR true OR false: %d\n\n\n", true OR true OR false);
 
 
   printf("XOR:\n");
@@ -52,6 +63,27 @@ int main() {
   // xorList example
   printf("xorList(allFalse): %d\n", xorList(allFalse));
   printf("xorList(oneTrue): %d\n", xorList(oneTrue));
-  printf("xorList(someTrue): %d\n\n\n", xorList(someTrue));
+  printf("xorList(someTrue): %d\n\n", xorList(someTrue));
+
+  // XOR example
+  printf("true XOR false: %d\n", true XOR false);
+  printf("false XOR false XOR false: %d\n", false XOR false XOR false);
+  printf("true XOR false XOR false: %d\n", true XOR false XOR false);
+  printf("true XOR true XOR false: %d\n", true XOR true XOR false);
+  printf("true XOR true XOR true XOR false: %d\n\n\n", true XOR true XOR true XOR false);
+
+
+  printf("NOT:\n");
+
+  // NOT example
+  printf("NOT false: %d\n", NOT false);
+  printf("NOT true: %d\n\n\n", NOT true);
+
+
+  printf("NOR:\n");
+
+  // NOR example
+  printf("true NOR false: %d\n", true NOR false);
+  printf("NOT false NOR true: %d\n", NOT false NOR true);
   return 0;
 }
