@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include "logicalc.h"
-
+//testing
 // AND
 bool and(int numOfElements, ...) {
   int i;
