@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include "src/logicalc.h"
 
+
 int main() {
   bool allFalse[3] = {false, false, false};
   bool oneTrue[3]  = {true, false, false};
