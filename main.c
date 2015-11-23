@@ -65,6 +65,21 @@ int main() {
   printf("xorList(oneTrue): %d\n", xorList(oneTrue));
   printf("xorList(someTrue): %d\n\n", xorList(someTrue));
 
+
+  printf("formalXor:\n");
+
+  // formalXor example
+  printf("formalXor(3, false, false, false): %d\n", formalXor(3, false, false, false));
+  printf("formalXor(3, true, false, false): %d\n", formalXor(3, true, false, false));
+  printf("formalXor(3, true, true, false): %d\n", formalXor(3, true, true, false));
+  printf("formalXor(3, true, true, true): %d\n\n", formalXor(3, true, true, true));
+
+  // formalXorList example
+  printf("formalXorList(allFalse): %d\n", formalXorList(allFalse));
+  printf("formalXorList(oneTrue): %d\n", formalXorList(oneTrue));
+  printf("formalXorList(someTrue): %d\n", formalXorList(someTrue));
+  printf("formalXorList(allTrue): %d\n\n", formalXorList(allTrue));
+
   // XOR example
   printf("true XOR false: %d\n", true XOR false);
   printf("false XOR false XOR false: %d\n", false XOR false XOR false);
@@ -78,12 +93,5 @@ int main() {
   // NOT example
   printf("NOT false: %d\n", NOT false);
   printf("NOT true: %d\n\n\n", NOT true);
-
-
-  printf("NOR:\n");
-
-  // NOR example
-  printf("true NOR false: %d\n", true NOR false);
-  printf("NOT false NOR true: %d\n", NOT false NOR true);
   return 0;
 }
