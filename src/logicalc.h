@@ -16,14 +16,11 @@ bool logical_xor(unsigned short array_size, bool boolean_list[]);
 
 bool logical_strict_xor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
 bool logical_nor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool logical_nand(unsigned short array_size, bool boolean_list[]);
-
-// todo: implement
 bool logical_xnor(unsigned short array_size, bool boolean_list[]);
+
+bool logical_nand(unsigned short array_size, bool boolean_list[]);
 
 // todo fgarci03 -> luis06: implement
 bool logical_not(unsigned short array_size, bool boolean_list[]);

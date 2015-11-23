@@ -1,0 +1,7 @@
+- test cases
+- find test framework
+- find documentation framework
+- build library in C++
+- update makefile with:
+  . make test
+  . make build
