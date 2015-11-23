@@ -1,17 +1,13 @@
 #include <stdbool.h>
 #include "logicalc.h"
 
-// todo fgarci03: notice how most functions are the same? Implement an abstract method to be used by all
+static bool logic_iterator(bool initial_result, bool condition_matcher, bool boolean_list[], unsigned short array_size) {
+  unsigned short i;
+  bool result = initial_result;
 
-// AND
-bool logical_and(bool booleanList[]) {
-  int i;
-  int listIterator = sizeof(booleanList) - 1;
-  bool result = true;
-
-  for (i = 0; i < listIterator; i++) {
-    if (!booleanList[i]) {
-      result = false;
+  for (i = 0u; i < array_size; i++) {
+    if (condition_matcher ? boolean_list[i] : !boolean_list[i]) {
+      result = !initial_result;
       break;
     }
   }
@@ -19,62 +15,49 @@ bool logical_and(bool booleanList[]) {
   return result;
 }
 
-// OR
-bool logical_or(bool booleanList[]) {
-  int i;
-  int listIterator = sizeof(booleanList) - 1;
-  bool result = false;
-
-
-  for (i = 0; i < listIterator; i++) {
-    if (booleanList[i]) {
-      result = true;
-      break;
-    }
-  }
-
-  return result;
+bool logical_and(unsigned short array_size, bool boolean_list[]) {
+  return logic_iterator(true, false, boolean_list, array_size);
 }
 
-// XOR
-bool logical_xor(bool booleanList[]) {
+bool logical_or(unsigned short array_size, bool boolean_list[]) {
+  return logic_iterator(false, true, boolean_list, array_size);
+}
+
+bool logical_xor(unsigned short array_size, bool boolean_list[]) {
   bool result = false;
 
-  int i;
-  int numOfTruths = 0;
-  int listIterator = sizeof(booleanList) - 1;
+  unsigned short i;
+  unsigned short numOfTruths = 0u;
 
-  for (i = 0; i < listIterator; i++) {
-    if (booleanList[i]) {
+  for (i = 0u; i < array_size; i++) {
+    if (boolean_list[i]) {
       numOfTruths++;
     }
   }
 
-  if (numOfTruths > 0 && numOfTruths % 2) {
+  if (numOfTruths > 0u && numOfTruths % 2u) {
     result = true;
   }
 
   return result;
 }
 
-// formal XOR
-bool logical_strict_xor(bool booleanList[]) {
+bool logical_strict_xor(unsigned short array_size, bool boolean_list[]) {
   bool result = false;
 
-  int i;
-  int numOfTruths = 0;
-  int listIterator = sizeof(booleanList) - 1;
+  unsigned short i;
+  unsigned short numOfTruths = 0u;
 
-  for (i = 0; i < listIterator; i++) {
-    if (booleanList[i]) {
+  for (i = 0u; i < array_size; i++) {
+    if (boolean_list[i]) {
       numOfTruths++;
     }
-    if (numOfTruths > 1) {
+    if (numOfTruths > 1u) {
       break;
     }
   }
 
-  if (numOfTruths == 1) {
+  if (numOfTruths == 1u) {
     result = true;
   }
 
