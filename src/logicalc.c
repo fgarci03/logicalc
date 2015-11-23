@@ -7,28 +7,33 @@
 bool logical_and(bool booleanList[]) {
   int i;
   int listIterator = sizeof(booleanList) - 1;
+  bool result = true;
 
   for (i = 0; i < listIterator; i++) {
     if (!booleanList[i]) {
-      return false;
+      result = false;
+      break;
     }
   }
 
-  return true;
+  return result;
 }
 
 // OR
 bool logical_or(bool booleanList[]) {
   int i;
   int listIterator = sizeof(booleanList) - 1;
+  bool result = false;
+
 
   for (i = 0; i < listIterator; i++) {
     if (booleanList[i]) {
-      return true;
+      result = true;
+      break;
     }
   }
 
-  return false;
+  return result;
 }
 
 // XOR
