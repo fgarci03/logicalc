@@ -25,4 +25,6 @@ bool logical_nand(unsigned short array_size, bool boolean_list[]);
 // todo fgarci03 -> luis06: implement
 bool logical_not(unsigned short array_size, bool boolean_list[]);
 
+void logical_not(unsigned short array_size, bool *boolean_list);
+
 #endif

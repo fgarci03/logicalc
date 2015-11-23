@@ -62,11 +62,48 @@ int main() {
   printf("true XOR true XOR false: %d\n", true XOR true XOR false);
   printf("true XOR true XOR true XOR false: %d\n\n\n", true XOR true XOR true XOR false);
 
-
   printf("NOT:\n");
 
   // NOT example
   printf("NOT false: %d\n", NOT false);
   printf("NOT true: %d\n\n\n", NOT true);
+  
+  int not_i;
+  //Applying not to allFalse array
+  logical_not (sizeof(allFalse),allFalse);
+  printf("allFalseChanged Array:");
+  for (not_i=0;not_i<sizeof(allFalse)){
+    printf("%d ",allFalse[i]);
+  }
+  printf("\n");
+
+  //Applying not to ontTrue array
+  printf("oneTrueOriginal Array:");
+  for (not_i=0;not_i<sizeof(oneTrue)){
+    printf("%d ",oneTrue[i]);
+  }
+  printf("\n");
+
+  logical_not (sizeof(oneTrue),oneTrue);
+  printf("oneTrueChanged Array:");
+  for (not_i=0;not_i<sizeof(oneTrue)){
+    printf("%d ",oneTrue[i]);
+  }
+  printf("\n");
+
+  //Applying not to someTrue array
+  printf("someTrueOriginal Array:");
+  for (not_i=0;not_i<sizeof(someTrue)){
+    printf("%d ",someTrue[i]);
+  }
+  printf("\n");
+
+  logical_not (sizeof(someTrue),someTrue);
+  printf("someTrueChanged Array:");
+  for (not_i=0;not_i<sizeof(someTrue)){
+    printf("%d ",someTrue[i]);
+  }
+  printf("\n");
+
   return 0;
 }
