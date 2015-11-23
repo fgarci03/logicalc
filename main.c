@@ -16,18 +16,11 @@ int main() {
   printf("bool allTrue[3]  = {true, true, true};\n\n\n");
 
   printf("AND:\n");
-
-  // and example
-  printf("and(3, false, false, false): %d\n", and(3, false, false, false));
-  printf("and(3, true, false, false): %d\n", and(3, true, false, false));
-  printf("and(3, true, true, false): %d\n", and(3, true, true, false));
-  printf("and(3, true, true, false): %d\n\n", and(3, true, true, true));
-
-  // andList example
-  printf("andList({false, false, false}): %d\n", andList(allFalse));
-  printf("andList({true, false, false}): %d\n", andList(oneTrue));
-  printf("andList({true, true, false}): %d\n", andList(someTrue));
-  printf("andList({true, true, true}): %d\n\n", andList(allTrue));
+  // logical_and() example
+  printf("logical_and(sizeof(allFalse), allFalse)): %d\n", logical_and(sizeof(allFalse), allFalse));
+  printf("logical_and(sizeof(oneTrue), oneTrue)): %d\n", logical_and(sizeof(oneTrue), oneTrue));
+  printf("logical_and(sizeof(someTrue), someTrue)): %d\n", logical_and(sizeof(someTrue), someTrue));
+  printf("logical_and(sizeof(allTrue), allTrue)): %d\n\n", logical_and(sizeof(allTrue), allTrue));
 
   // AND example
   printf("false AND false AND false: %d\n", false AND false AND false);
@@ -37,16 +30,10 @@ int main() {
 
 
   printf("OR:\n");
-
-  // OR example
-  printf("or(3, false, false, false): %d\n", or(3, false, false, false));
-  printf("or(3, true, false, false): %d\n", or(3, true, false, false));
-  printf("or(3, true, true, false): %d\n\n", or(3, true, true, false));
-
-  // orList example
-  printf("orList(allFalse): %d\n", orList(allFalse));
-  printf("orList(oneTrue): %d\n", orList(oneTrue));
-  printf("orList(someTrue): %d\n\n", orList(someTrue));
+  // logical_or example
+  printf("logical_or(sizeof(allFalse), allFalse)): %d\n", logical_or(sizeof(allFalse), allFalse));
+  printf("logical_or(sizeof(oneTrue), oneTrue)): %d\n", logical_or(sizeof(oneTrue), oneTrue));
+  printf("logical_or(sizeof(someTrue), someTrue)): %d\n\n", logical_or(sizeof(someTrue), someTrue));
 
   // OR example
   printf("false OR false OR false: %d\n", false OR false OR false);
@@ -55,16 +42,18 @@ int main() {
 
 
   printf("XOR:\n");
+  // formalXorList example
+  printf("logical_xor(sizeof(allFalse), allFalse)): %d\n", logical_xor(sizeof(allFalse), allFalse));
+  printf("logical_xor(sizeof(oneTrue), oneTrue)): %d\n", logical_xor(sizeof(oneTrue), oneTrue));
+  printf("logical_xor(sizeof(someTrue), someTrue)): %d\n", logical_xor(sizeof(someTrue), someTrue));
+  printf("logical_xor(allTrue): %d\n\n", logical_xor(sizeof(allTrue), allTrue));
 
-  // XOR example
-  printf("xor(3, false, false, false): %d\n", xor(3, false, false, false));
-  printf("xor(3, true, false, false): %d\n", xor(3, true, false, false));
-  printf("xor(3, true, true, false): %d\n\n", xor(3, true, true, false));
 
-  // xorList example
-  printf("xorList(allFalse): %d\n", xorList(allFalse));
-  printf("xorList(oneTrue): %d\n", xorList(oneTrue));
-  printf("xorList(someTrue): %d\n\n", xorList(someTrue));
+  printf("Strict XOR:\n");
+  // logical_xor example
+  printf("logical_strict_xor(sizeof(allFalse), allFalse)): %d\n", logical_strict_xor(sizeof(allFalse), allFalse));
+  printf("logical_strict_xor(sizeof(oneTrue), oneTrue)): %d\n", logical_strict_xor(sizeof(oneTrue), oneTrue));
+  printf("logical_strict_xor(sizeof(someTrue), someTrue)): %d\n\n", logical_strict_xor(sizeof(someTrue), someTrue));
 
   // XOR example
   printf("true XOR false: %d\n", true XOR false);
@@ -79,12 +68,5 @@ int main() {
   // NOT example
   printf("NOT false: %d\n", NOT false);
   printf("NOT true: %d\n\n\n", NOT true);
-
-
-  printf("NOR:\n");
-
-  // NOR example
-  printf("true NOR false: %d\n", true NOR false);
-  printf("NOT false NOR true: %d\n", NOT false NOR true);
   return 0;
 }

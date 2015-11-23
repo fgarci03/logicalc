@@ -1,3 +1,5 @@
+// todo: how to handle booleans? should we use stdbool.h?
+
 #ifndef LOGICALC_H_
 #define LOGICALC_H_
 
@@ -5,37 +7,22 @@
 #define OR   ||
 #define XOR  !=
 #define NOT  !
-#define NOR  && ! // todo: this needs to be properly tested, and possibly removed :)
-#define XNOR ==
-// todo: check NAND
 
-bool and(int numOfElements, ...);
-bool andList(bool booleanList[]);
+bool logical_and(unsigned short array_size, bool boolean_list[]);
 
-bool or(int numOfElements, ...);
-bool orList(bool booleanList[]);
+bool logical_or(unsigned short array_size, bool boolean_list[]);
 
-bool xor(int numOfElements, ...);
-bool xorList(bool booleanList[]);
+bool logical_xor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool formalXor(int numOfElements, ...);
-bool formalXorList(bool booleanList[]);
+bool logical_strict_xor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool not(int numOfElements, ...);
-bool notList(bool booleanList[]);
+bool logical_nor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool nor(int numOfElements, ...);
-bool norList(bool booleanList[]);
+bool logical_xnor(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool nand(int numOfElements, ...);
-bool nandList(bool booleanList[]);
+bool logical_nand(unsigned short array_size, bool boolean_list[]);
 
-// todo: implement
-bool xnor(int numOfElements, ...);
-bool xnorList(bool booleanList[]);
+// todo fgarci03 -> luis06: implement
+bool logical_not(unsigned short array_size, bool boolean_list[]);
 
 #endif
