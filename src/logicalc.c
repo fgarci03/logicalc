@@ -73,3 +73,11 @@ bool logical_xnor(unsigned short array_size, bool boolean_list[]) {
 bool logical_nand(unsigned short array_size, bool boolean_list[]) {
   return NOT logical_and(array_size, boolean_list);
 }
+
+void logical_not(unsigned short array_size, bool *boolean_list){
+  unsigned short i;
+  for (i=0u;i<array_size;i++){
+      boolean_list[i]= NOT boolean_list[i];
+  }
+
+}
