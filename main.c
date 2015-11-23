@@ -72,36 +72,43 @@ int main() {
   //Applying not to allFalse array
   logical_not (sizeof(allFalse),allFalse);
   printf("allFalseChanged Array:");
-  for (not_i=0;not_i<sizeof(allFalse)){
-    printf("%d ",allFalse[i]);
+  for (not_i=0;not_i<sizeof(allFalse);not_i++){
+    printf("%d ",allFalse[not_i]);
   }
   printf("\n");
 
   //Applying not to ontTrue array
   printf("oneTrueOriginal Array:");
-  for (not_i=0;not_i<sizeof(oneTrue)){
-    printf("%d ",oneTrue[i]);
+  for (not_i=0;not_i<sizeof(oneTrue);not_i++){
+    printf("%d ",oneTrue[not_i]);
   }
   printf("\n");
 
   logical_not (sizeof(oneTrue),oneTrue);
   printf("oneTrueChanged Array:");
-  for (not_i=0;not_i<sizeof(oneTrue)){
-    printf("%d ",oneTrue[i]);
+  for (not_i=0;not_i<sizeof(oneTrue);not_i++){
+    printf("%d ",oneTrue[not_i]);
   }
   printf("\n");
 
   //Applying not to someTrue array
   printf("someTrueOriginal Array:");
-  for (not_i=0;not_i<sizeof(someTrue)){
-    printf("%d ",someTrue[i]);
+  for (not_i=0;not_i<sizeof(someTrue);not_i++){
+    printf("%d ",someTrue[not_i]);
   }
   printf("\n");
 
   logical_not (sizeof(someTrue),someTrue);
   printf("someTrueChanged Array:");
-  for (not_i=0;not_i<sizeof(someTrue)){
-    printf("%d ",someTrue[i]);
+  for (not_i=0;not_i<sizeof(someTrue);not_i++){
+    printf("%d ",someTrue[not_i]);
+  }
+  printf("\n");
+
+logical_not (sizeof(allTrue),allTrue);
+  printf("allTrueChanged Array:");
+  for (not_i=0;not_i<sizeof(allTrue);not_i++){
+    printf("%d ",allTrue[not_i]);
   }
   printf("\n");
 

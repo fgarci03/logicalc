@@ -8,23 +8,20 @@
 #define XOR  !=
 #define NOT  !
 
-bool logical_and(unsigned short array_size, bool boolean_list[]);
+bool logical_and(unsigned short, bool*);
 
-bool logical_or(unsigned short array_size, bool boolean_list[]);
+bool logical_or(unsigned short, bool*);
 
-bool logical_xor(unsigned short array_size, bool boolean_list[]);
+bool logical_xor(unsigned short, bool*);
 
-bool logical_strict_xor(unsigned short array_size, bool boolean_list[]);
+bool logical_strict_xor(unsigned short, bool*);
 
-bool logical_nor(unsigned short array_size, bool boolean_list[]);
+bool logical_nor(unsigned short, bool*);
 
-bool logical_xnor(unsigned short array_size, bool boolean_list[]);
+bool logical_xnor(unsigned short, bool*);
 
-bool logical_nand(unsigned short array_size, bool boolean_list[]);
+bool logical_nand(unsigned short, bool*);
 
-// todo fgarci03 -> luis06: implement
-bool logical_not(unsigned short array_size, bool boolean_list[]);
-
-void logical_not(unsigned short array_size, bool *boolean_list);
+void logical_not(unsigned short, bool*);
 
 #endif
