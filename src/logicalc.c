@@ -1,27 +1,10 @@
-#include <stdarg.h>
 #include <stdbool.h>
 #include "logicalc.h"
 
 // todo fgarci03: notice how most functions are the same? Implement an abstract method to be used by all
 
 // AND
-bool and(int numOfElements, ...) {
-  int i;
-
-  va_list args;
-  va_start(args, numOfElements);
-
-  for (i = 0; i < numOfElements; i++) {
-    if (!va_arg(args, int)) {
-      return false;
-    }
-  }
-  va_end(args);
-
-  return true;
-}
-
-bool andList(bool booleanList[]) {
+bool logical_and(bool booleanList[]) {
   int i;
   int listIterator = sizeof(booleanList) - 1;
 
@@ -35,23 +18,7 @@ bool andList(bool booleanList[]) {
 }
 
 // OR
-bool or(int numOfElements, ...) {
-  int i;
-
-  va_list args;
-  va_start(args, numOfElements);
-
-  for (i = 0; i < numOfElements; i++) {
-    if (va_arg(args, int)) {
-      return true;
-    }
-  }
-  va_end(args);
-
-  return false;
-}
-
-bool orList(bool booleanList[]) {
+bool logical_or(bool booleanList[]) {
   int i;
   int listIterator = sizeof(booleanList) - 1;
 
@@ -65,33 +32,7 @@ bool orList(bool booleanList[]) {
 }
 
 // XOR
-bool xor(int numOfElements, ...) {
-  bool result = false;
-
-  int i;
-  int numOfTruths = 0;
-
-  va_list args;
-  va_start(args, numOfElements);
-
-  for (i = 0; i < numOfElements; i++) {
-    if (va_arg(args, int)) {
-      numOfTruths++;
-    }
-    if (numOfTruths > 1) {
-      break;
-    }
-  }
-  va_end(args);
-
-  if (numOfTruths == 1) {
-    result = true;
-  }
-
-  return result;
-}
-
-bool xorList(bool booleanList[]) {
+bool logical_xor(bool booleanList[]) {
   bool result = false;
 
   int i;
@@ -102,12 +43,9 @@ bool xorList(bool booleanList[]) {
     if (booleanList[i]) {
       numOfTruths++;
     }
-    if (numOfTruths > 1) {
-      break;
-    }
   }
 
-  if (numOfTruths == 1) {
+  if (numOfTruths > 0 && numOfTruths % 2) {
     result = true;
   }
 
@@ -115,30 +53,7 @@ bool xorList(bool booleanList[]) {
 }
 
 // formal XOR
-bool formalXor(int numOfElements, ...) {
-  bool result = false;
-
-  int i;
-  int numOfTruths = 0;
-
-  va_list args;
-  va_start(args, numOfElements);
-
-  for (i = 0; i < numOfElements; i++) {
-    if (va_arg(args, int)) {
-      numOfTruths++;
-    }
-  }
-  va_end(args);
-
-  if (numOfTruths > 0 && numOfTruths % 2) {
-    result = true;
-  }
-
-  return result;
-}
-
-bool formalXorList(bool booleanList[]) {
+bool logical_strict_xor(bool booleanList[]) {
   bool result = false;
 
   int i;
@@ -149,9 +64,12 @@ bool formalXorList(bool booleanList[]) {
     if (booleanList[i]) {
       numOfTruths++;
     }
+    if (numOfTruths > 1) {
+      break;
+    }
   }
 
-  if (numOfTruths > 0 && numOfTruths % 2) {
+  if (numOfTruths == 1) {
     result = true;
   }
 

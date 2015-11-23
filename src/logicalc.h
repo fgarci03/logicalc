@@ -8,33 +8,24 @@
 #define XOR  !=
 #define NOT  !
 
+bool logical_and(bool booleanList[]);
 
-bool and(int numOfElements, ...);
-bool andList(bool booleanList[]);
+bool logical_or(bool booleanList[]);
 
-bool or(int numOfElements, ...);
-bool orList(bool booleanList[]);
+bool logical_xor(bool booleanList[]);
 
-bool xor(int numOfElements, ...);
-bool xorList(bool booleanList[]);
-
-bool formalXor(int numOfElements, ...);
-bool formalXorList(bool booleanList[]);
+bool logical_strict_xor(bool booleanList[]);
 
 // todo: implement
-bool nor(int numOfElements, ...);
-bool norList(bool booleanList[]);
+bool logical_nor(bool booleanList[]);
 
 // todo: implement
-bool nand(int numOfElements, ...);
-bool nandList(bool booleanList[]);
+bool logical_nand(bool booleanList[]);
 
 // todo: implement
-bool xnor(int numOfElements, ...);
-bool xnorList(bool booleanList[]);
+bool logical_xnor(bool booleanList[]);
 
-// todo fgarci03 -> luis06: check possible implementations for a NOT function (return an array of the inverse values? return void and change the values directly with pointers?)
-bool not(int numOfElements, ...);
-bool notList(bool booleanList[]);
+// todo fgarci03 -> luis06: implement
+bool logical_not(bool booleanList[]);
 
 #endif
